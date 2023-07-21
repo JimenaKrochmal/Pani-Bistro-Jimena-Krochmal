@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pani Bistró</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -28,22 +29,19 @@
 
     <main>
         <h1>BIENVENIDOS A PANI BISTRÓ</h1>
-        <!-- en realidad estas fotos ponerlas como las del footer con un etiqueta a, y que lleven al link de la seccion que corresponde  -->
-        <figure>
-            <img src="./imagenes/index/imagenLocalIndex.jpeg" alt="imagen del local de Pani.">
-        </figure>
-        <figure>
-            <img src="./imagenes/index/imagenComidaIndex.jpeg" alt="imagen de hamburguesa con papas fritas.">
-        </figure>
-        <figure>
-            <img src="./imagenes/index/imagenPostreIndex.png" alt="imagen del postre Chocotorta.">
-        </figure>
-        <figure>
-            <img src="./imagenes/index/imagenEventosIndex.jpeg" alt="imagen de copas brindando.">
-        </figure>
-        <figure>
-            <img src="./imagenes/index/imagenpanilogo.png" alt="imagen del logo de Pani.">
-        </figure>
+        <div class="imagenes-index-posicion">
+            <a href="./pages/nosotros.html"> <img src="./imagenes/index/imagenLocalIndex.jpeg"
+                    alt="Imagen del local de Pani."></a>
+            <a href="./pages/comidas.html"> <img src="./imagenes/index/imagenComidaIndex.jpeg"
+                    alt="Imagen de hamburguesa con papas fritas."></a>
+            <a href="./pages/tortas.html"> <img src="./imagenes/index/imagenPostreIndex.png"
+                    alt="Imagen del postre Chocotorta."></a>
+            <a href="./pages/especiales.html"> <img src="./imagenes/index/imagenEventosIndex.jpeg"
+                    alt="Imagen de copas brindando."></a>
+            <a href="./pages/nosotros.html"> <img src="./imagenes/index/imagenpanilogo.png"
+                    alt="Imagen del logo de Pani."></a>
+        </div>
+
     </main>
 
     <hr>
@@ -61,6 +59,7 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </footer>
 
+    <script src="./main.js"></script>
 </body>
 
 </html>
