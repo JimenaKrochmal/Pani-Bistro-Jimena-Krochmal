@@ -122,7 +122,7 @@ while(comenzar === "Si"){
             const nombresTortas = tortas.map((item) => item.nombre);
             alert("La torta fue cargada correctamente. Todas las tortas en el sistema hasta ahora son: " + nombresTortas);
         }else{
-            alert("Ok. Pasemos a la siguiente torta");
+            comenzar = prompt("¿Desea volver a empezar? Si/ No");
         }
 }
 }
