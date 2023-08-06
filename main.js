@@ -83,25 +83,26 @@ const tortas = [
     {nombre: "Cheesecake", precio: 2000, stock: 50}
 ];
 
-let comenzar = prompt("¿desea comenzar? Si/ No");
+let comenzar = prompt("¿Desea comenzar? Si/ No");
+
 
 while(comenzar === "Si"){
     let tortaBuscar = prompt("Ingrese el nombre de la torta que desea buscar: ");
     const findTorta = tortas.find(item => item.nombre === tortaBuscar);
-    
+
     function datosTorta(findTorta){
-    alert(`
-    los datos de la torta que usted ingresó son los siguientes: 
-    Nombre: ${findTorta.nombre}
-    Precio: $ ${findTorta.precio}
-    cantidad de stock: ${findTorta.stock} unidades
-    `)
-    }
-    
+        alert(`
+        Los datos de la torta ${tortaBuscar} son los siguientes: 
+        Nombre: ${findTorta.nombre}
+        Precio: $ ${findTorta.precio} 
+        cantidad de stock: ${findTorta.stock} unidades
+        `)
+        }
+
     if(findTorta){
         datosTorta(findTorta);
     }else{
-        let agregarTorta = prompt("¿Desea agregarla? Si/ No : ");
+        let agregarTorta = prompt(`¿Desea agregar la torta ${tortaBuscar}? Si/ No : `);
         if(agregarTorta === "Si"){
             class TortaAgregada{
                 constructor(nombreTorta, precioTorta, stockTorta){
@@ -117,13 +118,13 @@ while(comenzar === "Si"){
             
             const tortaBuscar = new TortaAgregada(nombreTortaIngresada, precioTortaIngresada, stockTortaIngresada);
             tortas.push(tortaBuscar);
-
-        const nombresTortas = tortas.map((item) => item.nombre);
-        alert("La torta fue cargada. Todas las tortas hasta ahora: " + nombresTortas);
-    }else{
-        alert("Ok. Hasta luego.");
-    }
+            
+            const nombresTortas = tortas.map((item) => item.nombre);
+            alert("La torta fue cargada correctamente. Todas las tortas en el sistema hasta ahora son: " + nombresTortas);
+        }else{
+            alert("Ok. Pasemos a la siguiente torta");
+        }
+}
 }
 
-
-}
+alert("Ok. Hasta luego.");
